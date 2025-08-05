@@ -1,0 +1,17 @@
+name: 'Greet User'
+description: 'Prints a greeting message'
+inputs:
+  name:
+    description: 'Name of the user'
+    required: true
+  items:
+    description: 'comma separated list of items'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - run: echo "Hello, ${{ inputs.name }}!"
+      shell: bash
+branding:
+  icon: 'user'
+  color: 'blue'
